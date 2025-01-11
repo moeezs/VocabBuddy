@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+
+    <link rel="stylesheet" type="text/css" href="../cross-page-assets/vf-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../page-styles/popup.css">
+</head>
+<body>
+    <div class="banner" style="border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+        <img src="../icons/icon128.png" alt="icon" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+        <h1 id="banner_text">VocabBuddy</h1>
+    </div>
+    <div class="form-element" id="activate-container">
+        <p>Activate: </p>
+        <label class="switch">
+            <input id="activate" type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div id="dicitonary-selection-items">
+        <div class="form-element">
+            <p>Language: </p>
+            <div class="box">
+                <select id="languages" name="Language"></select>
+            </div>
+        </div>
+        <div class="form-element">
+            <p>Dictionary: </p>
+            <div class="box">
+                <select id="dictionaries" name="Dictionary"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class='buttons'>
+        <div style="width: 100%; text-align: center;">
+            <p class="boton" id="new-dict"><i class="fas fa-book"></i>New Dictionary</p>
+        </div>
+        <div style="width: 100%; text-align: center;">
+            <p class="boton" id="index"><i class="fas fa-gear"></i>More Options</p>
+        </div>
+    </div>
+
+    <script src=../page-scripts/popup.js> </script>
+</body>
+</html>

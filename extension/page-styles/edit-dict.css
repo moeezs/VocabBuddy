@@ -1,0 +1,72 @@
+#container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgba(13, 143, 229, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    opacity: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#delete_dict {
+    background-color: rgb(145, 30, 9);
+    color: white;
+}
+.bs {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#dicitonary_selection_items .form-element {
+    margin-bottom: 0px;
+}
+
+#choose_dictionary {
+    display: inline;
+}
+#mod_dict_items {
+    display: none;
+}
+.form-element p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.box::before {
+    top: 0px;
+    line-height: 33px;
+}
+.box select {
+    margin-top: 0px;
+}
+
+.form-element p {
+    margin-top: 0px;
+}
+
+#back-button {
+    max-width: 500px;
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+}
+.form-element select {
+    width: 120px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: rgba(14, 104, 163, 0.5);
+    color: white;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+.bs .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.bs .boton i {
+    margin-right: 5px; /* Optional: add a little extra space between icon and text */
+}

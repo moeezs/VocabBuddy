@@ -1,0 +1,60 @@
+#container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgba(13, 143, 229, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    opacity: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-element {
+    margin-bottom: 20px;
+}
+.form-element label {
+    display: flexbox;
+    margin-bottom: 8px;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+}
+.form-element input{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(14, 104, 163, 0.5);
+    color: white;
+    transition: all 0.3s ease;
+} 
+.form-element select {
+    width: 58%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(14, 104, 163, 0.5);
+    color: white;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+.form-element input:focus, 
+.form-element select:focus {
+    outline: none;
+    border-color: #6afff3;
+    box-shadow: 0 0 5px rgba(106, 255, 243, 0.5);
+}
+#submit {
+    width: 500px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    gap: 10px;
+}
+
+
+
+#submit i {
+    margin-right: 5px; /* Optional: add a little extra space between icon and text */
+}

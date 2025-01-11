@@ -1,0 +1,120 @@
+body {
+    font-size: 12pt;
+    padding: 20px; /* Add padding around the entire popup content */
+    box-sizing: border-box; /* Ensure padding doesn't increase overall width */
+    width: 300px; /* Adjust width as needed */
+    height: 470px;
+    border-radius: 10px;
+    background-image: none;
+}
+
+.banner h1:hover {
+    cursor: default;
+}
+.banner {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.buttons .boton {
+    width: 100%;
+    margin: 10px;
+    padding: 12px 9px;
+    text-align: center;
+    justify-content: center; /* Center text horizontally */
+    border-radius: 15px; /* More rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    position: relative;
+    font-weight: bold;
+}
+
+.buttons .boton i {
+    position: absolute;
+    left: 15px;
+    margin-right: 1px;
+    padding: 10px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center buttons vertically */
+}
+
+select, input {
+    border-radius: 10px; /* More rounded corners */
+    padding: 8px 12px; /* More internal spacing */
+    margin: 5px 0; /* Space between form elements */
+    border: 1px solid rgba(14, 104, 163, 0.3); /* Subtle border */
+    outline: none; /* Remove default focus outline */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    height: 35px;
+}
+
+select:focus, input:focus {
+    box-shadow: 0 0 5px rgba(14, 104, 163, 0.5); /* Subtle focus effect */
+    border-color: rgba(14, 104, 163, 0.7);
+}
+
+.form-element {
+    display: flex;
+    justify-content: space-between;
+    max-width: 210px;
+    padding: 5px 0;
+    margin-left: 20px;
+    margin-bottom: 10px; /* More space between form elements */
+    font-weight: bold;
+    text-align: left;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 22px;
+    margin-top: 20px;
+    margin-right: 0px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(161, 221, 243, 0.393);
+    transition: .4s;
+    border-radius: 22px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background-color: rgb(14, 104, 163);
+}
+
+input:checked + .slider:before {
+    transform: translateX(78px);
+}

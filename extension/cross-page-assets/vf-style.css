@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: rgb(10, 154, 250);
+    font-size: 16pt;
+    color: #FFF;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1362%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1363%26quot%3b)'%3e%3c/rect%3e%3cpath d='M375.7864718017173 675.170476617943L361.24874755049797 509.0035280633849 209.6195232471592 689.7082008691623z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1281.0089707145037 145.75440847268712L1350.6345399203396-18.27315346270686 1069.7804124143308-40.69772630376366z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1606.2911441289004 386.85868133247857L1561.60927624524 176.64702033927136 1268.6327186972594 348.7756526613656z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M566.9584755440918 282.0233519771441L620.6381029426609 623.0463221120774 858.4426062256231 437.25308177852935z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1481.9310009871008 1136.1370614021102L1703.8194461021253 929.222738892721 1275.0166784777116 914.2486162870857z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M95.722%2c431.847C134.048%2c432.431%2c171.126%2c412.524%2c188.816%2c378.52C205.407%2c346.628%2c193.561%2c309.793%2c175.34%2c278.804C157.437%2c248.355%2c131.043%2c220.458%2c95.722%2c220.188C60.039%2c219.916%2c31.587%2c246.54%2c13.971%2c277.573C-3.384%2c308.147%2c-9.048%2c344.693%2c7.413%2c375.757C24.914%2c408.783%2c58.35%2c431.278%2c95.722%2c431.847' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1362'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='100%25' x2='50%25' y2='0%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1363'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(10%2c 154%2c 250%2c 1)' offset='0.42'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.banner {
+    background-color: rgb(14, 104, 163);
+    margin-bottom:20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align:center;
+}
+.banner h1 {
+    /* Remove margins impued to banner by h1 tags on default*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.banner h1:hover {
+  cursor: pointer;
+}
+
+
+.boton {
+    background-color: rgb(14, 104, 163);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    max-width: 220px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: black;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+}
+
+
+.boton:focus {
+  box-shadow: rgb(7, 82, 131) 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgb(7, 82, 131) 0 -3px 0 inset;
+}
+
+.boton:hover {
+  
+  transform: translateY(-2px);
+}
+
+.boton:active {
+  box-shadow: rgb(7, 82, 131) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.form-element {
+  display: flex;
+  justify-content: space-between;
+  max-width: 53%;
+  padding: 10px 0;
+  margin-left:25%;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+
+select {
+  background-color: rgb(14, 104, 163);
+  color: white;
+  height: 24px;
+  width: 100px;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+}
+
+.box {
+  position: relative;
+}
+.box::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 0px;
+  text-align: center;
+  font-size: 14pt;
+  line-height: 53px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* CSS for toggle button
+ * Original from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+ */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 6px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+
+}
+.grid-container {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the grid */
+  max-width: 800px; /* Constrain the grid's width */
+  margin: 0 auto; /* Center the grid container */
+}
+
+.boton i {
+  flex: 0 0 30%; /* Icon takes up 30% */
+  font-size: 30px; /* Adjust the icon size */
+  text-align: center;
+}
+
+
+input:checked + .slider {
+  background-color: rgb(5, 90, 160);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(5, 90, 160);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+#page-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#page-title h2 {
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #e0f6f4, #c0d5de, #ffffff);
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}

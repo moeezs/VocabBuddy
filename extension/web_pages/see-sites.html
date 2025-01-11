@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Sites</title>
+
+    <link rel="icon" type="image/svg" href="../icons/icon128.png">
+    <link rel="stylesheet" type="text/css" href="../cross-page-assets/vf-style.css">
+    <link rel="stylesheet" type="text/css" href="../cross-page-assets/vocab_quiz.css">
+    <link rel="stylesheet" type="text/css" href="../cross-page-assets/highlight-style.css">
+    <link rel="stylesheet" type="text/css" href="../cross-page-assets/dicts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../page-styles/see-sites.css">
+
+</head>
+<body>
+    <div id="banner_anchor"></div>
+    <div class="form" id="container">
+        <div style="text-align: center;" id="page-title">
+            <h2>Review or Edit Site Data</h2>
+        </div>
+        <div class="search-section">
+            <div id="labels-div">
+                <label for="labels">Label Search: </label>
+                <input id="label-input" list="labels" name="labels" type="text" class="text-input" autocomplete="off">
+                <datalist id="labels"></datalist>
+            </div>
+            <div id="domains-div">
+                <label for="domains">Domain Search: </label>
+                <input id="domain-input" list="domains" name="domains" type="text" class="text-input" autocomplete="off">
+                <datalist id="domains"></datalist>
+            </div>
+        </div>
+        <div id=list-of-urls></div>
+        <div class=error-message id=error-message></div>
+        <div class="site-data-section">
+            <div>
+                <h2 id="site-name-header"></h2>
+            </div>
+            <div class="sitedata-section" id="labels-section">
+                <div class="title">Labels</div>
+                <div id="labels-list-section" class="site-data-section word-grid"></div>
+            </div>
+            <div class="sitedata-section" id="present-words-section">
+                <div class="title">Present Words</div>
+                <div id="present-words" class="site-data-section word-grid"></div>
+            </div>
+            <div class="sitedata-section" id="missing-words-section">
+                <div class="title">Missing Words</div>
+                <div id="missing-words" class="site-data-section word-grid"></div>
+            </div>
+        </div>
+        <div style="text-align: center;" class="action-buttons">
+            <p class="boton" id="search"><i class="fa-solid fa-magnifying-glass"></i>Search</p>
+            <div class="secondary-buttons">
+                <p class="boton" id="delete-sites"><i class="fa fa-trash"></i>Delete Selected</p>
+                <p class="boton" id="mod-site-data"><i class="fa fa-globe"></i>Site Data</p>
+            </div>
+            <div class="tertiary-buttons">
+                <p class="boton" id="domains-button"><i class="fa fa-arrow-left"></i>Return to Domains</p>
+                <p class="boton" id="quiz-button"><i class="fa fa-brain"></i>Quiz</p>
+            </div>
+        </div>
+    </div>
+
+    <script src=../page-scripts/see-sites.js> </script>
+
+</body>
+</html>

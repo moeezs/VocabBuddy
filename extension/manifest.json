@@ -1,0 +1,52 @@
+{
+    "name": "VocabBuddy",
+    "description": "VocabBuddy is a browser extension built for people build their vocabulary for one, or several, languages.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {
+      "16": "icons/icon128.png",
+      "32": "icons/icon128.png",
+      "48": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    },
+    "permissions": [
+      "contextMenus",
+      "storage",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": [
+          "content.js"
+        ],
+        "css": [
+          "cross-page-assets/highlight-style.css",
+          "cross-page-assets/vocab_quiz.css"
+        ]
+      }
+    ],
+    "action": {
+      "default_popup": "web_pages/popup.html",
+      "default_icon": {
+        "16": "icons/icon128.png",
+        "32": "icons/icon128.png",
+        "48": "icons/icon128.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [ 
+          "cross-page-assets/quiz.html",
+          "cross-page-assets/vf-style.css",
+          "cross-page-assets/highlight-style.css",
+          "cross-page-assets/vocab_quiz.css"
+        ],
+        "matches": [ "<all_urls>" ]
+      }
+    ]
+  }

@@ -1,0 +1,187 @@
+.form {
+    text-align: left;
+}
+
+#container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+input {
+    width: 30px;
+    margin-right: 0px;
+    height: 14pt;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(14, 104, 163, 0.5);
+    color: white;
+    transition: all 0.3s ease;
+}
+.alt-form-element {
+    margin-bottom: 10px;
+    font-size: 10pt;
+    width: 100%;
+}
+.alt-form-element div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 93%;
+    height: 12pt;
+}
+.alt-form-element a:hover {
+    cursor: pointer;
+}
+.alt-form-element a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 93%;
+    height: 12pt;
+    color: white;
+    text-decoration: none;
+}
+.alt-form-element div:hover{
+    cursor: pointer;
+}
+#list-of-urls {
+    margin-left: 5px;
+}
+#list-of-domains {
+    margin-left: 20px;
+}
+#delete-sites {
+    background-color: rgb(145, 30, 9);
+    color: white;
+}
+#mod-site-data {
+    background-color: rgb(32, 116, 67);
+    color: white;
+}
+.word-grid {
+    display: grid;
+    grid-template-columns: 8em 8em 8em;
+    padding: 3px;
+}
+.word-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.word-item:hover {
+    background-color: rgb(14, 104, 163);
+}
+.word-item p {
+    display: inline-block;
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+.delete-x {
+    color: #FF0000;
+}
+.delete-x:hover {
+    cursor: pointer;
+}
+.add-element-item {
+    display: inline-block;
+}
+input.add-element-item {
+    width: 8em;
+}
+.add-element-plus {
+    margin-right: 8px;
+    color: #40FF00;
+}
+.add-element-plus:hover {
+    cursor: pointer;
+}
+.text-input {
+    width: 16em;
+}
+label {
+    margin: 15px;
+    display: inline-block;
+    width: 175px;
+}
+#site-name-header {
+    text-align: center;
+    max-width: 32em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#site-name-header a {
+    color: #FFF;
+}
+.error-message {
+    text-align: center;
+    background-color: #FF0000;
+    color: #FFF;
+    margin-top: 30pt;
+}
+.sitedata-section {
+    margin-bottom: 30pt;
+    width: 100%;
+    border-top: solid #00FFFF;
+}
+.sitedata-section .title {
+    font-size: 20pt;
+    padding-left: 8px;
+    padding-top: 12px;
+    font-weight: 500;
+}
+
+/* New button styles */
+.action-buttons {
+    
+    width: 100%;
+    align-items: stretch; /* This ensures child elements stretch to full width */
+}
+
+#search {
+    width: 100%;
+    align-self: stretch;
+
+    margin-bottom: 10px;
+    
+    justify-content: center;
+    text-align: center;
+}
+.action-buttons .secondary-buttons, .action-buttons .tertiary-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: large;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+.action-buttons .secondary-buttons .boton, .action-buttons .tertiary-buttons .boton {
+    flex: 1;
+    height: 50px;
+}
+.action-buttons .secondary-buttons .boton:hover, .action-buttons .tertiary-buttons .boton:hover, #back-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: rgba(14, 104, 163, 0.9);
+}
+
+
+.action-buttons .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.action-buttons .boton i {
+    margin-right: 5px; /* Optional: add a little extra space between icon and text */
+}
