@@ -31,12 +31,10 @@ function initButtons(): void {
                 }
             };
             chrome.runtime.sendMessage(setChecked); 
-            // Send message to currently all tabs to update based on new state we set
             const get_tabs = chrome.tabs.query({});
             get_tabs.then((tabs) => {
                 for (let i = 0; i < tabs.length; i++) {
                     const tab = tabs[i];
-                    // TODO: make this with value
                     const message: CSMessage = {
                         messageType: CSMessageType.ActivationStateChange,
                         payload: {newActivatedState: isActive},
@@ -90,8 +88,6 @@ function processRequestedData(dictInfo: DictionaryIdentifier, langs: string[]): 
             }
         );
 
-        // Change currentDi (in both volatile and non-volatile memory)
-        // TODO: Determine if this duplication is needed and remove if not
         document.getElementById('dictionaries')?.addEventListener("change", 
         function (this: HTMLSelectElement) {
             const languageSelect = (document.getElementById('languages') as HTMLSelectElement);

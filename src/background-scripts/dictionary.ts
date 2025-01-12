@@ -122,11 +122,9 @@ export class DictionaryManager {
      */
     async removeDictionary(dictID: DictionaryIdentifier): Promise<boolean> {
         try {
-            // Extract identifying components
             const language: string = dictID.language;
             const dict_index: number = dictID.index;
 
-            // Remove dictionary referenced by dictID if possible
             const dc: GlobalDictionaryData = await this.source.getDictionaryData();
             const dictionaries: SubjectToDictsMapping = dc.languagesToResources;
             const relevantDictionaries: Dictionary[] = dictionaries[language];
@@ -137,8 +135,6 @@ export class DictionaryManager {
             }
             dictionaries[language].splice(dict_index, 1);
 
-            // Update current dictionary if we've affected it's location, either leaving as is,
-            // shifting index, or completely removing based on what makes sense
             if (dc.currentDictionary.language === dictID.language) {
                 if (dc.currentDictionary.index === dictID.index) {
                     dc.currentDictionary.language = '';
@@ -148,12 +144,11 @@ export class DictionaryManager {
                 }
             }
 
-            // Remove subject from SubjectToDictsMapping if it is empty
             if (dictionaries[language].length === 0) {
                 delete dictionaries[language];
             }
 
-            this.source.setDictionaryData(dc);  // persist changes to disk
+            this.source.setDictionaryData(dc); 
             return true;
         } catch(err) {
             console.error(err);
@@ -195,7 +190,7 @@ export class DictionaryManager {
             let dictList: Dictionary[] = dictionaries[dictID.language];
             if (dictList === null ||
                 dictID.index < 0 ||
-                dictID.index >= dictList.length) {  // TODO: make private invalid locaiton function for code reuse
+                dictID.index >= dictList.length) {
                 console.error(`Bad data for ${dictionaries}: ${dictID.language}, ${dictID.index}`)
                 return;
             }
@@ -209,7 +204,7 @@ export class DictionaryManager {
             const oldCurrentDictIndex = dc.currentDictionary.index;
 
             // Move dictionary from old language to new language (with edits)
-            let successful_delete = await this.removeDictionary(dictID); // must get dicts after doing this
+            let successful_delete = await this.removeDictionary(dictID); 
             if (successful_delete) {
                 dc = await this.source.getDictionaryData();
                 let dictionaries: SubjectToDictsMapping = dc.languagesToResources;

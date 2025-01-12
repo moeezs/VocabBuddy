@@ -63,7 +63,7 @@ function makeBookMarksMap(node: Node): Map<Node, number> | null {
     let result: Map<Node, number> = new Map<Node, number>();
     let currentNode = node;
     for (let i = posInParentList.length - 1; i >= 0; i--) {
-        if (isHighlightNode(currentNode)) {  // TODO: verify that this works in the real world
+        if (isHighlightNode(currentNode)) {  
             return null;
         }
 
@@ -155,7 +155,7 @@ function getNodesToHighlight(currentN: Node, startN: Node, endN: Node, accumulat
                     continue;
                 }
 
-                bookMarks.set(currentN, i+1);  // TODO:F fix this s
+                bookMarks.set(currentN, i+1); 
                 if (getNodesToHighlight(childN, startN, endN, accumulator, bookMarks)) {
                     return true;
                 }
@@ -364,9 +364,6 @@ function handler(request: any): void {
      }
 }
 
-// Load data from local storage and, if configured to have highlight nodes, query for
-// stored text of this node and attempt to highlight them
-// TODO: shorten delay or remove once have watcher for DOM update.
 setTimeout(() => {
     let getActivationMssg: BSMessage = {
         messageType: BSMessageType.GetCurrentActivation,

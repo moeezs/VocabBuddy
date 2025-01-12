@@ -29,8 +29,6 @@ input {
     width: 47%;
 }
 
-/* Tooltip CSS, inspired heavily by following:
-   https://www.w3schools.com/css/css_tooltip.asp */
 .tooltipicon {
     height: 20px;
     width: 20px;

@@ -65,7 +65,7 @@ function addPlusSignToLabelsSection(labels: string[], url: string,
     addButton.setAttribute('class', 'add-element-plus add-element-item');
     addButton.addEventListener('click', () => {
         const inputElement = document.getElementById('new-label-id') as HTMLInputElement;
-        const content = inputElement.value.trim();  // TODO: add more validation
+        const content = inputElement.value.trim();
         if (content.length === 0 || content.length > 24) {
             return;
         }
@@ -142,7 +142,7 @@ function createTextEntries<T>(textList: string[], divListElementSectionId: strin
             closeButton.setAttribute('class', 'delete-x');
             containerElement.append(closeButton);
 
-            const text = document.createElement('p');  // TODO: make this input? or editable some other way
+            const text = document.createElement('p');
             text.textContent = content;
             containerElement.append(text);
 

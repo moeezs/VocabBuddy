@@ -6,7 +6,6 @@ fetch(chrome.runtime.getURL("cross-page-assets/banner.html"))
     .then(function(data) {
         document.getElementById("banner_anchor").innerHTML = data;
         
-        // Optional: Add click handler for banner text if needed
         const bannerText = document.getElementById("banner_text");
         if (bannerText) {
             bannerText.onclick = function() {

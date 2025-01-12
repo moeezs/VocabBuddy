@@ -206,20 +206,6 @@ class TextIndex {
         return this.changeCursor(textNodes, (x, y) => this.goBackByOne(x, y))
     }
 
-    /**
-     * Attempts to update this object to reference some other character in textNodes using
-     * at least one call to updateCursor. If this succeedes, returns true, updating 
-     * lastAdvacneIncreaseNode if nodeIndex changed. Otherwise, returns false and keeps
-     * state the same as before function call.
-     * 
-     * TODO: review to ensure that new-nodes are more clearly treated as spaces
-     * 
-     * @param textNodes see advance
-     * @param updateCursor function that changes the character cursor references by one if
-     * possible, returning true on success; otherwise keeps index fields the same and returns 
-     * false.
-     * @returns 
-     */
     private changeCursor(textNodes: Node[], updateCursor: (x: string, y: Node[]) => boolean) {
         let currentNodeText = (textNodes[this.nodeIndex].textContent as string);
         let currentChar = currentNodeText.charAt(this.charIndex);
@@ -333,15 +319,7 @@ function makeTrieStructure(words: Set<string>): Trie {
     return result;
 }
 
-/**
- * Looks for all descendant nodes of some node passed in and returns ordered list of 
- * text nodes that have at least one character
- * 
- * @param node root node in which to look for text nodes. Node itself is not included in
- * search
- * @returns array of Text Nodes in root node that have at least one character as content.
- * The array is ordered based on Depth-First-Search traversal.
- */
+
 function getAllFilledTextNodesUnder(node: Node): Node[]{
     let textNodes: Node[] = [];
     for (let nodeCursor = node.firstChild; nodeCursor; nodeCursor = nodeCursor.nextSibling){
@@ -360,8 +338,8 @@ function getAllFilledTextNodesUnder(node: Node): Node[]{
 
 /**
  * 
- * @param root root of trie structure listing words to search for in site body
- * @param textNodes ordered list of non-null text-nodes 
+ * @param root 
+ * @param textNodes 
  * @param highlight 
  * @returns 
  */
@@ -396,7 +374,6 @@ function findMissingWords(root: Trie, textNodes: Node[], highlight: WordConsumer
             textRange.setEnd(textNodes[wordEndPos.nodeIndex], endOffset);
             const foundText = textRange.toString();
             
-            // TODO: consider using range here to define foundText instead.
             const foundWordObj: Word = {
                 startOffset: startOffset,
                 endOffset: endOffset,
@@ -424,10 +401,8 @@ function findMissingWords(root: Trie, textNodes: Node[], highlight: WordConsumer
 
             currentPos.charIndex = 0;
             currentPos.nodeIndex = 0;
-            // TODO: consider advancing charIndex while points to empty space
         }
 
-        // Ritual clearing of buffer values
         wordEndPos.charIndex = 0;
         wordEndPos.nodeIndex = 0;
         wordEndPos.lastAdvanceIncreasedNode = false;
