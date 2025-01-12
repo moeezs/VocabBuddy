@@ -70,3 +70,51 @@
 .bs .boton i {
     margin-right: 5px; /* Optional: add a little extra space between icon and text */
 }
+
+#show-status {
+    border-radius: 10px;
+    background-color: rgb(25, 164, 25);
+    border: 1px solid #06572f;
+}
+.tooltip {
+    position: relative;
+    display: inline-block; /* Ensure the tooltip wraps around the icon */
+}
+
+.tooltipicon {
+    width: 20px; /* Adjust the size of the icon */
+    height: 20px;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 200px; /* Set the tooltip width */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1; /* Make the tooltip visible on hover */
+}
+
+.tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Arrow below the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}

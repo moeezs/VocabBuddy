@@ -22,31 +22,39 @@
         </div>
         <div id="mod_dict_items">
             <div class="form-element">
-                <div class="tooltip">
-                    <img src="../icons/tooltip-icon.svg" alt="tool tip for name" class="tooltipicon">
-                    <div class="tooltiptext">Name of new dictionary</div>
-                </div>
-                <label for="name" style="margin-left: -100px;">Name:</label>
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name">
             </div>
             <div class="form-element">
-                <div class="tooltip">
-                    <img src="../icons/tooltip-icon.svg" alt="tool tip for url" class="tooltipicon">
-                    <span class="tooltiptext">
-                        Search the text {word} in the dictionary of your choice.
-                        Copy resulting url in here.
-                    </span>
-                </div>
                 <label for="name">URL Regex:</label>
                 <input type="url" id="url" name="url">
             </div>
             <div class="form-element">
-                <div class="tooltip">
-                    <img src="../icons/tooltip-icon.svg" alt="tool tip for language" class="tooltipicon">
-                    <span class="tooltiptext">Language for new dictionary</span>
-                </div>
                 <label for="lang">Language:</label>
-                <input type="text" id="lang" name="lang">
+                <select id="lang" name="lang">
+                    <option value="">Select a language</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Danish">Danish</option>
+                    <option value="Dutch">Dutch</option>
+                    <option value="Finnish">Finnish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Greek">Greek</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Indonesian">Indonesian</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Norwegian">Norwegian</option>
+                    <option value="Polish">Polish</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Swedish">Swedish</option>
+                    <option value="Turkish">Turkish</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                </select>
             </div>
             <div class="bs" style="text-align: center;">
                 <p class="boton" id="save_dict">Save</p>
