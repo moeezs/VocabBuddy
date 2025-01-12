@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../cross-page-assets/dicts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../page-styles/new-dict.css">
+    
 </head>
 <body>
     <div id="banner_anchor"></div>
@@ -18,13 +19,9 @@
             <h2>Create New Dictionary</h2>
         </div>
         <div class="form-element">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div class="form-element">
             <label for="lang">Language:</label>
             <select id="lang" name="lang">
-                <option value="">Select a language</option>
+                <option value=""></option>
                 <option value="Arabic">Arabic</option>
                 <option value="Chinese">Chinese</option>
                 <option value="Danish">Danish</option>
@@ -47,6 +44,10 @@
                 <option value="Turkish">Turkish</option>
                 <option value="Vietnamese">Vietnamese</option>
             </select>
+        </div>
+        <div class="form-element">
+            <label for="name">Dictionary:</label>
+            <input type="text" id="name" name="name" class="white-placeholder">
         </div>
         <div style="text-align: center;" id="submit">
             <p class="boton" ><i class="fa fa-plus"></i>Create</p>

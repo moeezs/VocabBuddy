@@ -50,16 +50,7 @@
     padding: 0 30px;
     border: none;
 }
-.form-element select {
-    width: 120px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    background-color: rgba(14, 104, 163, 0.5);
-    color: white;
-    transition: all 0.3s ease;
-    height: fit-content;
-}
+
 .bs .boton {
     display: flex;
     align-items: center;
@@ -117,4 +108,45 @@
     border-width: 5px;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-bottom: 20px
+}
+.form-element label {
+    display: flexbox;
+    margin-bottom: 8px;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+.form-element input{
+    width: 50%;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(14, 104, 163, 0.5);
+    color: white;
+    transition: all 0.3s ease;
+} 
+.form-element select {
+    width: 58%;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(14, 104, 163, 0.5);
+    color: white;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+.form-element input:focus, 
+.form-element select:focus {
+    outline: none;
+    border-color: #6afff3;
+    box-shadow: 0 0 5px rgba(106, 255, 243, 0.5);
 }

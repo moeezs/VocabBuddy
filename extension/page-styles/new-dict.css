@@ -8,17 +8,21 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .form-element {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-bottom: 20px
 }
 .form-element label {
     display: flexbox;
     margin-bottom: 8px;
-    font-size: large;
+    font-size: 22px;
     color: white;
     font-weight: bold;
 }
 .form-element input{
     width: 50%;
+    height: 30px;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
@@ -28,6 +32,7 @@
 } 
 .form-element select {
     width: 58%;
+    height: 30px;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
@@ -58,3 +63,20 @@
 #submit i {
     margin-right: 5px; /* Optional: add a little extra space between icon and text */
 }
+
+
+.white-placeholder {
+    &::placeholder {
+      color: white;
+      padding-left: 5px;
+    }
+  }
+
+#show-status {
+    border-radius: 10px;
+    background-color: rgb(25, 164, 25);
+    border: 1px solid #06572f;
+    margin-top: -20px
+}
+
+

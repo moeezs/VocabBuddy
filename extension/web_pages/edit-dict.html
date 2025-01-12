@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Dictionaries</title>
-
-    <link rel="stylesheet" href="../page-styles/edit-dict.css">
     <link rel="icon" type="image/svg" href="../icons/icon128.png">
     <link rel="stylesheet" type="text/css" href="../cross-page-assets/vf-style.css">
     <link rel="stylesheet" type="text/css" href="../cross-page-assets/dicts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../page-styles/edit-dict.css">
 
-    
 </head>
 <body>
     <div id="banner_anchor"></div>
@@ -22,17 +19,9 @@
         </div>
         <div id="mod_dict_items">
             <div class="form-element">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="form-element">
-                <label for="name">URL Regex:</label>
-                <input type="url" id="url" name="url">
-            </div>
-            <div class="form-element">
                 <label for="lang">Language:</label>
                 <select id="lang" name="lang">
-                    <option value="">Select a language</option>
+                    <option value=""></option>
                     <option value="Arabic">Arabic</option>
                     <option value="Chinese">Chinese</option>
                     <option value="Danish">Danish</option>
@@ -56,29 +45,33 @@
                     <option value="Vietnamese">Vietnamese</option>
                 </select>
             </div>
+            <div class="form-element">
+                <label for="name">Dictionary:</label>
+                <input type="text" id="name" name="name">
+            </div>
             <div class="bs" style="text-align: center;">
-                <p class="boton" id="save_dict">Save</p>
+                <p class="boton" id="save_dict"><i class="fa fa-check"></i> Save</p>
             </div>
         </div>
 
         <div id="choose_dictionary">
             <div id="dicitonary_selection_items">
                 <div class="form-element">
-                    <p>Language: </p>
-                    <div class="box">
-                        <select id="languages" name="Language"></select>
+                    <p>Language:     </p>
+                    <div class="box" style="margin-left: 20px;">
+                        <select id="languages" name="Language" style="width: 110px;"></select>
                     </div>
                 </div>
                 <div class="form-element">
-                    <p>Dictionary: </p>
-                    <div class="box">
-                        <select id="dictionaries" name="Dictionary"></select>
+                    <p>Dictionary:   </p>
+                    <div class="box" style="margin-left: 20px;">
+                        <select id="dictionaries" name="Dictionary" style="width: 110px;"></select>
                     </div>
                 </div>
             </div>
             <div class="bs" style="text-align: center; margin-top: 15px;">
                 <p class="boton" style="margin-right:15%; background-color: #b13333;" id="delete-dict"><i class="fas fa-trash"></i>Delete</p>
-                <p class="boton" id="edit_dict"><i class="fas fa-pencil"></i>Edit</p>
+                <p class="boton" id="edit_dict" style="width: 107px;"><i class="fas fa-pencil"></i>Edit</p>
             </div>
         </div>
     </div>
