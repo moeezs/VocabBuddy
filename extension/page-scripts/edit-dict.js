@@ -197,6 +197,8 @@
             o();
             const e = document.getElementById("show-status");
             (e.textContent = `${n} Deleted`), (e.style.display = "inherit");
+
+            location.reload();
           }
         });
       }
