@@ -118,3 +118,8 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(78px);
 }
+
+.disabled {
+    pointer-events: none; /* Prevent interaction */
+    opacity: 0.5; /* Dim the appearance */
+}

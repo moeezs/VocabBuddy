@@ -1,4 +1,8 @@
-.banner {
+* {
+    font-family: sans-serif;
+}
+
+.banner-quiz {
     background-color: rgb(14, 104, 163);
     text-align:center;
     border-radius: 20px; 
@@ -7,6 +11,30 @@
     gap: 10px; 
     margin: 20px; 
     padding: 20px;
+    position: relative;
+    font-weight: bold;
+    justify-content: center;
+    color: white;
+    font-size: larger;
+ 
+
+    letter-spacing: 2px;
+    background-size: 200% auto;
+  
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    
+}
+
+
+.banner-quiz .close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
 }
 
 .dark_screen {
@@ -79,3 +107,47 @@
   .quiz_counter_css {
       font-size: 20pt;
   }
+
+  .boton {
+    background-color: rgb(14, 104, 163);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    max-width: 220px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: black;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+}
+
+
+.boton:focus {
+  box-shadow: rgb(7, 82, 131) 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgb(7, 82, 131) 0 -3px 0 inset;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton:active {
+  box-shadow: rgb(7, 82, 131) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+#next {
+    width: 100%; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#quiz_counter {
+    color: white;
+    padding: 20px;
+}
