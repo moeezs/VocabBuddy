@@ -1,4 +1,4 @@
-# VocabBuddy (Click to Watch a Demo!) 🌐  
+# 🌐 VocabBuddy (Click to Watch a Demo!)
 [![Video Demo](https://img.youtube.com/vi/iLDRERtZa4Y/0.jpg)](https://youtu.be/iLDRERtZa4Y)
 
 # 💡 **Inspiration**  
