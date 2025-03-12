@@ -1,3 +1,6 @@
+# VocabBuddy 🌐  
+[![Video Demo](https://img.youtube.com/vi/iLDRERtZa4Y/0.jpg)](https://youtu.be/iLDRERtZa4Y)
+
 # 💡 **Inspiration**  
 In our eyes, languages are like passports, they open doors to new places and experiences, bridging gaps between cultures. The ability to communicate effectively is a skill that brings people together. That’s the heart of what VocabBuddy strives to achieve: **“Empower the world with your words.”**
 
