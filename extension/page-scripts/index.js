@@ -87,13 +87,11 @@
             l((o = o.apply(n, a || [])).next());
           })
         );
-        var n, a, i, o;
       },
     ),
       n("new-dict"),
       n("edit-dict"),
       n("see-sites");
-      n("buddy")
     const r = document.getElementById("import-data-path");
     r.addEventListener("change", (t) => {
       const n = t.target.files,

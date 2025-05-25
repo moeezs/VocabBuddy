@@ -31,10 +31,8 @@ function siteDataToIDBSiteData(siteData: SiteData, url: string): IDBSiteData {
  * NonVolatileBrowserStorage DAO used to store SiteData inside IndexedDB
  */
 export class IndexedDBStorage implements NonVolatileBrowserStorage {
-    // name of table to use
     public static readonly SITE_DATA_TABLE = 'site-data';
     public static readonly LABEL_TABLE = 'label-data';
-    // index  mapping database version to transform function to move from previous version of table to said table
     private static readonly TRANSFORMS = [
         () => {console.error("SHOULD NOT BE HERE");}, // noop
         IndexedDBStorage.v1Creation,
@@ -52,13 +50,11 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
             };
             let shouldPullSiteDataFromLS: boolean = false;
             openRequest.onupgradeneeded = (event: any) => {
-                console.log(`Upgrading ${DB_NAME} to ${event.newVersion} from ${event.oldVersion}`);
                 shouldPullSiteDataFromLS = event.oldVersion <= 0;
 
                 const db: IDBDatabase = event.target.result;
                 // Only perform transformations asociated with newer versions (older transforms not needed)
                 for (let i = Math.max(0, event.oldVersion) + 1; i <= event.newVersion; i++) {
-                    console.log(`Performing IndexedDB Transform ${i}`);
                     const func = IndexedDBStorage.TRANSFORMS[i];
                     func(db);  // Will likely need changing for future, but fine for now
                 }
@@ -66,15 +62,10 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
             };
             openRequest.onsuccess = async (event: any) => {
                 this.db = event.target.result as IDBDatabase;
-                console.log('this.db set');
                 if (shouldPullSiteDataFromLS && oldStorage !== undefined) {
-                    // Use fact that localStorage mimics upload/download data format
-                    console.log('Transferring any old localStorage http data to indexedDB');
                     const oldData = await oldStorage.getAllStorageData();
                     await this.uploadExtensionData(oldData);
 
-                    // Using suboptimal-simple approach since this is out of critical path
-                    console.log('Loading Completed, Removing useless data from localStorage');
                     const oldUrls = await oldStorage.getAllPageUrls();
                     for (let i = 0; i < oldUrls.length; i++) {
                         oldStorage.removePageData(oldUrls[i]);
@@ -199,14 +190,12 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
         const query = (db: IDBDatabase): Promise<void> => {
             return new Promise(async (resolve, reject) => {
                 if (label.length === 0 || label.length > MAX_LABEL_LENGTH) {
-                    console.log(`Attempted to add label [${labelTemp}] to ${url}, it has either 0 or more than ${MAX_LABEL_LENGTH} characters`);
                     resolve();
                     return;
                 }
                 const siteData = await this.getPageData(url);
                 if (siteData.wordEntries.length === 0 &&
                     siteData.missingWords.length === 0) {
-                    console.log(`Cannot add label entry ${label} ${url} since no site data is present`);
                     resolve();
                     return;
                 }
@@ -246,7 +235,6 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
         const query = (db: IDBDatabase): Promise<void> => {
             return new Promise((resolve, reject) => {
                 if (label.length === 0) {
-                    console.log(`Attempted to add empty subject to ${url}`);
                     resolve();
                 }
 
@@ -443,8 +431,6 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
                 const objectStore = readTransaction.objectStore(IndexedDBStorage.SITE_DATA_TABLE);
                 const osIndex = objectStore.index('schemeAndHost');
 
-                // There is no function to just get all values of an index:
-                // https://stackoverflow.com/questions/53590913/how-to-get-all-idbindex-key-values-instead-of-object-store-primary-keys
                 const request = osIndex.openKeyCursor();
                 request.onerror = (err) => {
                     reject(`Unexpected error when getting all SiteData:` + err);
@@ -593,7 +579,6 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
      * @param db database connection object with which to create object stores
      */
     private static v1Creation(db: IDBDatabase): void {
-        console.log('Adding siteData table');
         // Create an objectStore for this database
         const objectStore = db.createObjectStore(IndexedDBStorage.SITE_DATA_TABLE, { autoIncrement: true });
 
@@ -609,7 +594,6 @@ export class IndexedDBStorage implements NonVolatileBrowserStorage {
      * @param db database connection object with which to create object stores
      */
     private static addSubjectTable(db: IDBDatabase): void {
-        console.log('Adding label table');
         const objectStore = db.createObjectStore(IndexedDBStorage.LABEL_TABLE,
             { keyPath: ['label', 'schemeAndHost', 'urlPath'] }
         );

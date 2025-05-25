@@ -11,7 +11,6 @@ export const HILIGHT_CLASS_HOVER = 'vf-highlighted-hover'; // class of hilighted
  */
 export function defineWord(word: string|null) {
     if (word !== null && word !== '') {
-        console.log(`Looking up: ${word}`);
         let mssg: BSMessage = {
             messageType: BSMessageType.SearchWordURL,
             payload: {

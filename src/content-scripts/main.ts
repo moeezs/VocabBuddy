@@ -307,7 +307,6 @@ function logUnexpected(key: string, value: any) {
  * @param request
  */
 function handler(request: any): void {
-    console.log(`REQUEST MADE TO CONTENT SCRIPT: ${request.messageType}`);
 
     if (!isCsMessage(request)) {
         logUnexpected("request structure", request);
